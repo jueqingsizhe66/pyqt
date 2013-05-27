@@ -1,0 +1,11 @@
+tuna = "fish"
+if tuna == "bash":
+    print 'this is a fish alright'
+
+elif tuna == "slamon":
+    print "I hope i dont get slamonila poissin"
+
+elif tuna == "tuna":
+    print "easy there tuna boat"
+else:
+    print 'I don\'t know what this is'

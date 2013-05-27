@@ -1,0 +1,56 @@
+class Rectangle(obj
+ect):
+    def __init(self, width, height):
+        self.width = width
+        self.height = height
+    def _area():
+        return self.width * self.height
+    area = property(fget = _area)
+    
+
+rect = Rectangle(4,5)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-4-741ea29df37b> in <module>()
+----> 1 rect = Rectangle(4,5)
+
+TypeError: object.__new__() takes no parameters
+
+class Rectangle(object):
+    def __init(self, width, height):  ############__underscore的重要性！
+        self.width = width
+        self.height = height
+    def _area(self):
+        return self.width * self.height
+    area = property(fget = _area)
+    
+
+rect = Rectangle(4,5)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-741ea29df37b> in <module>()
+----> 1 rect = Rectangle(4,5)
+
+TypeError: object.__new__() takes no parameters
+
+class Rectangle(object):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def _area(self):
+        return self.width * self.height
+    area = property(fget = _area)
+    
+
+rect = Rectangle(4,5)
+
+rect.are
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-9-9a3a67709e7e> in <module>()
+----> 1 rect.are
+
+AttributeError: 'Rectangle' object has no attribute 'are'
+
+rect.area
+Out[10]: 20

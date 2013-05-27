@@ -1,0 +1,52 @@
+In [62]: debug      --------------------------->>>进入debug状态
+> c:\python27\lib\site-packages\matplotlib\image.py(411)set_data()
+    410             (self._A.ndim == 3 and self._A.shape[-1] not in (3, 4))):
+--> 411             raise TypeError("Invalid dimensions for image data")
+    412
+
+
+ipdb> h            ----------------------------->>>all the help command
+
+Documented commands (type help <topic>):
+========================================
+EOF    bt         cont      enable  jump  pdef   r        tbreak   w
+a      c          continue  exit    l     pdoc   restart  u        whatis
+alias  cl         d         h       list  pinfo  return   unalias  where
+args   clear      debug     help    n     pp     run      unt
+b      commands   disable   ignore  next  q      s        until
+break  condition  down      j       p     quit   step     up
+
+Miscellaneous help topics:
+==========================
+exec  pdb
+
+Undocumented commands:
+======================
+retval  rv
+
+ipdb> u               -------------------------------》》》debug下一步
+> c:\python27\lib\site-packages\matplotlib\axes.py(6796)imshow()
+   6795
+-> 6796         im.set_data(X)
+   6797         im.set_alpha(alpha)
+
+ipdb> u                -----------------------------》》》再次跟踪debug
+> c:\python27\lib\site-packages\matplotlib\pyplot.py(2380)imshow()
+   2379     finally:
+-> 2380         ax.hold(washold)
+   2381     sci(ret)
+
+ipdb> u
+> f:\pythoncode\test_debug.py(7)test_debug()
+      6     img = np.sin(x*np.cos(x))
+----> 7     pl.imshow(img)
+      8     pl.show()
+
+ipdb> u
+> <ipython-input-61-f8f43f5f69f2>(1)<module>()
+     -1 test_debug()
+
+ipdb> u
+*** Oldest frame
+ipdb> u
+*** Oldest frame

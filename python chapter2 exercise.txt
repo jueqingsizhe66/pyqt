@@ -1,0 +1,32 @@
+def increment(text = "AAAAB"):
+    if not text.isalpha():
+        raise ValueError,"text must be purely alphabetic"
+    OrdA = ord('A')
+    OrdZ = ord('Z')
+    changed = False
+    values = [ord(c) for c in reversed(text.upper())]
+    for i in range(len(values)):
+        if values[i] < OrdZ:
+            values[i] += 1
+            changed = True
+            break
+        elif values[i] == OrdZ:
+            values[i] == OrdA
+    if not changed:
+        values = [OrdA] + values
+    return "".join([chr(v) for v in reversed(values)])
+
+increment()
+Out[10]: 'AAAAC'
+
+increment()
+Out[11]: 'AAAAC'
+
+increment('AZ')
+Out[12]: 'BZ'
+
+increment('AAFZ')
+Out[13]: 'AAGZ'
+
+increment('sfdfAAFZ')
+Out[14]: 'SFDFAAGZ'

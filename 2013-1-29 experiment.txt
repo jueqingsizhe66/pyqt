@@ -1,0 +1,367 @@
+hobbies = ['Pokemon','Lego','Mountain Biding']
+
+foods = ['Pancake','chocolate','Apples']
+
+favorites = hobbies + foods
+
+print favorites
+['Pokemon', 'Lego', 'Mountain Biding', 'Pancake', 'chocolate', 'Apples']
+
+roofs = 3
+
+ninjas_per_roof = 25
+
+tunnels = 2
+
+samurai_per_tunnel = 40
+
+print((roof * ninjas_per_roof) + (tunnels * samurai_per_tunnel)£©
+  File "<ipython-input-11-d6092d67abb7>", line 1
+    print((roof * ninjas_per_roof) + (tunnels * samurai_per_tunnel)ï¼?[0m
+                                                                   ^
+SyntaxError: invalid syntax
+
+
+print((roof * ninjas_per_roof) + (tunnels * samurai_per_tunnel))
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-12-dda79ec3e51e> in <module>()
+----> 1 print((roof * ninjas_per_roof) + (tunnels * samurai_per_tunnel))
+
+NameError: name 'roof' is not defined
+
+print((roofs * ninjas_per_roof) + (tunnels * samurai_per_tunnel))
+155
+
+3 * 25 + 2 * 40
+Out[14]: 155
+
+first_name = 'Brandp'
+
+last_name = 'Brandp'
+
+print('Hi there, %s %s') % (first_name, last_name)
+Hi there, Brandp Brandp
+
+A = 100
+
+B = 100
+
+C = 50
+
+a = math.acos((math.pow(A,2) + math.pow(B,2) - math.pow(C,2)) / \
+(2 * A * B))
+
+a
+Out[22]: 0.5053605102841573
+
+print math.degrees(a)
+28.9550243719
+
+money = 2000
+
+if money > 1000:
+    print("I am rich!!!")
+else:
+    print("I am not rich!!")
+     print("But I might be later ..")
+    
+IndentationError: unexpected indent
+
+
+ninjas = 5
+
+if ninjas < 50£º
+  File "<ipython-input-27-844f770a8679>", line 1
+    if ninjas < 50ï¼?[0m
+                  ^
+SyntaxError: invalid syntax
+
+
+if ninjas < 50:
+    print("I 50")
+    elif ninjas < 30:
+        print("I 30")
+        elif ninjas < 10:
+            print("I 10")
+            
+  File "<ipython-input-28-f2fcdc4ff916>", line 3
+    elif ninjas < 30:
+       ^
+SyntaxError: invalid syntax
+
+
+if ninjas < 50:
+    print("I 50")
+elif ninjas < 30:
+    print("I 30")
+elif ninjas < 10:
+    print("I 10")
+    
+I 50
+
+if ninjas < 10:
+    print("I 10")
+elif ninjas < 30:
+    print("I 30")
+elif ninjas < 50:
+    print("I 50")
+    
+I 10
+
+for x in range(0,20):
+    print 'hello %s' % x
+    
+hello 0
+hello 1
+hello 2
+hello 3
+hello 4
+hello 5
+hello 6
+hello 7
+hello 8
+hello 9
+hello 10
+hello 11
+hello 12
+hello 13
+hello 14
+hello 15
+hello 16
+hello 17
+hello 18
+hello 19
+
+for x in range(0,20):
+    print ('hello %s' % x)
+    
+hello 0
+hello 1
+hello 2
+hello 3
+hello 4
+hello 5
+hello 6
+hello 7
+hello 8
+hello 9
+hello 10
+hello 11
+hello 12
+hello 13
+hello 14
+hello 15
+hello 16
+hello 17
+hello 18
+hello 19
+
+for x in range(0,20):
+    print ('hello %s' % x)
+    if x < 9:
+        break
+        
+hello 0
+
+for x in range(2,16,2)
+  File "<ipython-input-34-9b1e0a149295>", line 1
+    for x in range(2,16,2)
+                          ^
+SyntaxError: invalid syntax
+
+
+for x in range(2,16,2):
+    print x
+    
+2
+4
+6
+8
+10
+12
+14
+
+ingredients = ['snails','leeches','eyebrow','toes']
+
+x = 1
+
+for i in ingredients:
+    print '%s %s' % (x, i)
+    x = x + 1
+    
+1 snails
+2 leeches
+3 eyebrow
+4 toes
+
+
+weights = 30
+
+for year in range(1,16):
+    weight = weight + 1
+    moon_weight = weight * 0.165
+    print 'Year %s is %s' % (year, moon_weight)
+    
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-40-eca9fe9136e4> in <module>()
+      1 for year in range(1,16):
+----> 2     weight = weight + 1
+      3     moon_weight = weight * 0.165
+      4     print 'Year %s is %s' % (year, moon_weight)
+      5 
+
+NameError: name 'weight' is not defined
+
+for year in range(1,16):
+    weights = weights + 1
+    moon_weight = weights * 0.165
+    print 'Year %s is %s' % (year, moon_weight)
+    
+Year 1 is 5.115
+Year 2 is 5.28
+Year 3 is 5.445
+Year 4 is 5.61
+Year 5 is 5.775
+Year 6 is 5.94
+Year 7 is 6.105
+Year 8 is 6.27
+Year 9 is 6.435
+Year 10 is 6.6
+Year 11 is 6.765
+Year 12 is 6.93
+Year 13 is 7.095
+Year 14 is 7.26	
+Year 15 is 7.425
+
+def moon_weight(weight, increase):
+    for year in range(1,16):
+        weight = weight + increase
+        moon_weight = weight * 0.165
+        print 'Year %s is %s' % (year, moon_weight)
+moon_weight(30,1)
+Year 1 is 5.115
+Year 2 is 5.28
+Year 3 is 5.445
+Year 4 is 5.61
+Year 5 is 5.775
+Year 6 is 5.94
+Year 7 is 6.105
+Year 8 is 6.27
+Year 9 is 6.435
+Year 10 is 6.6
+Year 11 is 6.765
+Year 12 is 6.93
+Year 13 is 7.095
+Year 14 is 7.26
+Year 15 is 7.425
+
+
+
+
+def moon_weight(weight, increase, years):
+    years = years + 1
+    for year in range(1,years):   #you can use years variable!
+				# you must do your things in the loop
+        weight = weight + increase
+        moon_weight = weight * 0.165
+        print 'Year %s is %s' % (year, moon_weight)
+        
+
+moon_weight(30,1,5)
+Year 1 is 5.115
+Year 2 is 5.28
+Year 3 is 5.445
+Year 4 is 5.61
+Year 5 is 5.775      # you can show the data according to what you 			#want
+
+
+
+
+
+class Animals:
+    def breathe(self):
+        print 'breathing'
+    def move(self):
+        print 'moving'
+    def eat_food(self):
+        print 'eating food'
+        
+
+class Mammals(Animals):
+    def feed_young_with_milk(self):
+        print 'feeding young'
+        
+
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print 'eating leaves'
+        
+
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print 'eating leaves'
+    def left_foot_forward():
+        print 'left food forward'
+    def right_foot_forward():
+        print 'right_foot forward'
+    def left_foot_backward():
+        print 'left foot backward'
+    def right_foot_backward():
+        print 'right foot backward'
+        
+
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print 'eating leaves'
+    def left_foot_forward(self):
+        print 'left food forward'
+    def right_foot_forward(self):
+        print 'right_foot forward'
+    def left_foot_backward(self):
+        print 'left foot backward'
+    def right_foot_backward(self):
+        print 'right foot backward'
+    def dance(self):
+        self.left_foot_forward()
+        self.left_foot_backward()
+        self.right_foot_forward()
+        self.right_foot_backward()
+        self.left_foot_backward()
+        self.right_foot_backward()
+        self.left_foot_forward()
+        self.right_foot_forward()
+        
+
+reginald = Giraffes()
+
+reginald.dance()
+left food forward
+left foot backward
+right_foot forward
+right foot backward
+left foot backward
+right foot backward
+left food forward
+right_foot forward
+
+
+
+message = "if you need any help from us,please don't hesitate to call us"\
+
+words = message.split()
+
+
+for x in range(0,len(words),2):
+    print words[x]
+    
+if
+need
+help
+us,please
+hesitate
+call
+
+
+

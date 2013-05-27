@@ -1,0 +1,1260 @@
+1: install and say hello
+2: simple calculation (15 15.0  **)
+3: variables
+   when you don't know the what information may output
+   but the output you must keep in store ,so you create
+   one variable to save it! This is why variable exists
+   variable is just keep the future unknown consequence
+   into a variable , so you can keep track of it!
+ 
+   so variable -----unknown -----but something you should
+     understand -----and then you should analysis the real
+     phenomenen with the variable
+    in a word: variable ----unknown ----understand --utilize
+
+   interact with user: input("please Enter the number")
+                    raw_input("please Enter the number")
+
+4: module and function 
+    
+    python will find that "what the hell you are talking about?"
+                     "what the hell you guys want to mean?" 
+ 	if he don't understand,just error or exception
+          if he knows,just say something with you 
+ 	
+module ==ma jios
+module.function
+variable = module.function+expressions
+bucky = math.sqrt  not bucky  = math.sqrt()
+so you can use bucky(81) to replace the math.sqrt(81)
+
+5:strings
+  
+ "hey lin"
+ "hey now"
+ 'the start of string 'the end of string
+ "the start of string "the end of string
+
+ "he's a jerk" == 'he\'s a jerk'
+  how to store string :
+ 	a  = "hell0"
+        b  = "be"
+  and concatenate the string means add together
+            a+b
+  a,b can create one list
+
+
+
+In [27]: num = 19
+
+In [28]: print "bucky"+num
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-28-c739b0fe0a50> in <module>()
+----> 1 print "bucky"+num
+
+TypeError: cannot concatenate 'str' and 'int' objects
+
+one way to solve:
+
+In [30]: num = str(15)
+
+In [31]: print "bucky is "+ num
+bucky is 15
+
+
+Second way to solve:
+In [39]: num = 18
+
+In [40]: print "fd"+`num`   ////put the battis around the num 
+fd18
+
+three way to solve:
+ repr() is a little same with str()
+
+In [42]: print "fd"+repr(num)
+fd18
+
+7: between input() and raw_input()
+
+  input() ----->only number(string cannot) ,Math 
+  raw_input() ---> anything
+
+
+8:sequences and Lists
+ family = ['mom','dad','bro','sis','dog']
+  mom is 0 
+  dad is 1
+  bro is 2....
+In [47]: family = ['mom','dad','bro','sis','dog']
+
+In [48]: family[3]           ----------------positive way
+Out[48]: 'sis'
+
+In [49]: family[-3]          ----------------negative way
+Out[49]: 'bro'
+
+In [52]: family[-2]
+Out[52]: 'sis'
+
+
+In [50]: family(-2)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-50-dedb5e548128> in <module>()
+----> 1 family(-2)
+
+TypeError: 'list' object is not callable
+
+string is also can be sequence>>>>>>.>>>>>.>>>>>>.>>>>>
+
+In [53]: 'bucky'[3]
+Out[53]: 'k'
+
+In [54]: a = 'nuck'
+
+In [55]: a[3]
+Out[55]: 'k'
+9:tuple (tjupl or tapl)
+9:slicing(piece into sequences)
+
+In [56]: example = [0,1,2,3,4,5,6,7,8,9]
+
+In [57]: example[4]
+Out[57]: 4
+
+In [58]: example[4:]
+Out[58]: [4, 5, 6, 7, 8, 9]
+
+In [59]: example[:]
+Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [60]: example[6:9]
+Out[60]: [6, 7, 8]
+
+In [61]: example[6:-1]
+Out[61]: [6, 7, 8]
+
+example[min-height,max-height]
+
+In [64]: example[1:8:2]  range(1,8) and the step is 2
+Out[64]: [1, 3, 5, 7]
+
+In [66]: example[::-2]
+Out[66]: [9, 7, 5, 3, 1]
+
+In [67]: example[9:0:-2]
+Out[67]: [9, 7, 5, 3, 1]
+
+11:Editing sequences
+  
+concatenate number sequence:
+In [68]: [3,5,3]+[1,4,7]
+Out[68]: [3, 5, 3, 1, 4, 7]
+concatenate string sequences
+In [69]: ['strig','sis']+['dsad','fd']
+Out[69]: ['strig', 'sis', 'dsad', 'fd']
+
+
+
+In [70]: ['fd']+'fd'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-70-3c4e5ec409ee> in <module>()
+----> 1 ['fd']+'fd'
+
+TypeError: can only concatenate list (not "str") to list
+In [72]: `['fd']`+'fd'
+Out[72]: "['fd']fd"
+
+In [73]: str(['fd'])+'fd'
+Out[73]: "['fd']fd"
+
+In [74]: repr(['fd'])+'fd'
+Out[74]: "['fd']fd"
+
+In [75]: 'bucky'*10
+Out[75]: 'buckybuckybuckybuckybuckybuckybuckybuckybuckybucky'
+
+In [76]: [21]*10
+Out[76]: [21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+
+In [77]: (210)*10
+Out[77]: 2100
+
+in is a key word built in python 
+
+In [78]: name = 'roastbeef'
+
+In [79]: name
+Out[79]: 'roastbeef'
+
+In [80]: 'z' in name
+Out[80]: False
+
+In [81]: 'r' in name
+Out[81]: True
+
+
+In [84]: family
+Out[84]: ['mom', 'dad', 'bro', 'sis', 'dog']
+In [82]: 'sis' in family
+Out[82]: True
+
+In [83]: 'grand' in family
+Out[83]: False
+
+
+11: more List Functions
+
+len():
+In [85]: len(family)
+Out[85]: 5
+
+In [86]: len('fdf')
+Out[86]: 3
+
+In [87]: nums = [8,1,4,17,28,165,8]
+
+In [88]: len(nums)
+Out[88]: 7
+
+In [89]: max(nums)
+Out[89]: 165
+
+In [90]: min(nums)
+Out[90]: 1
+
+In [92]: sort(nums)
+Out[92]: array([  1,   4,   8,   8,  17,  28, 165])
+
+In [94]: list('string')
+Out[94]: ['s', 't', 'r', 'i', 'n', 'g']
+
+In [97]: nums
+Out[97]: [1, 4, 17, 28, 165, 8]
+
+In [98]: del nums[1]
+
+In [99]: nums
+Out[99]: [1, 17, 28, 165, 8]
+
+
+12:slicing Lists
+
+begin with slicing strs
+In [101]: example = 'sting'
+
+In [102]: example
+Out[102]: 'sting'
+
+In [103]: example[3:]
+Out[103]: 'ng'
+
+In [104]: example = list('easyhoss')
+
+In [105]: example
+Out[105]: ['e', 'a', 's', 'y', 'h', 'o', 's', 's']
+
+In [106]: example[4:]
+Out[106]: ['h', 'o', 's', 's']
+
+In [107]: example[4:] = 'fdfd'
+
+In [108]: example
+Out[108]: ['e', 'a', 's', 'y', 'f', 'd', 'f', 'd']
+
+
+sequence ==string +Lists+tuple
+
+In [109]: example = [7,8,9]
+
+In [110]: example[1:1] = [3,5,6]
+
+In [111]: example
+Out[111]: [7, 3, 5, 6, 8, 9]
+
+
+using slicing delete sth
+
+In [112]: example[1:5] = []
+
+In [113]: example
+Out[113]: [7, 9]
+
+
+
+13: Intro to Methods
+
+face.punch()
+face is an object which store the action and property
+ punch is an action which you can get from face
+
+
+
+In [114]: face = [21,12,30]
+
+In [115]: face.append[45]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-115-bed2ee9a207b> in <module>()
+----> 1 face.append[45]
+
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+
+In [116]: face.append(45)
+
+In [117]: face
+Out[117]: [21, 12, 30, 45]
+
+In [118]: apples = ['i','love','apples','apples']
+
+In [119]: apples.count('apples')
+Out[119]: 2
+
+In [120]: apples.count('bow')
+Out[120]: 0
+
+
+In [123]: two
+Out[123]: [4, 5, 6]
+
+In [124]: one
+Out[124]: [1, 3, 54]
+
+In [125]: one.extend(two)
+
+In [126]: one
+Out[126]: [1, 3, 54, 4, 5, 6]
+
+14:More Methods
+
+  In [127]: say = ['hey','now','brown','cow','ok']
+
+In [128]: say
+Out[128]: ['hey', 'now', 'brown', 'cow', 'ok']
+
+In [130]: say.index('brown')
+Out[130]: 2
+
+In [132]: say.insert(2,'ni')
+
+In [133]: say
+Out[133]: ['hey', 'now', 'ni', 'brown', 'cow', 'ok']
+
+
+In [134]: say.pop(1)
+Out[134]: 'now'
+
+In [135]: say
+Out[135]: ['hey', 'ni', 'brown', 'cow', 'ok']
+
+In [136]: say.remove('brown')  ////it is a little different from pop
+
+In [137]: say
+Out[137]: ['hey', 'ni', 'cow', 'ok']
+
+In [141]: say.reverse()
+
+In [142]: say
+Out[142]: ['ok', 'cow', 'ni', 'hey']
+
+
+15:Sort and Tuples
+
+begin with List
+In [146]: new
+Out[146]: [32, 54, 22, 7, 98, 1]
+
+In [147]: new.sort()
+
+In [148]: new
+Out[148]: [1, 7, 22, 32, 54, 98]
+
+In [149]: sorted('EasyHoss')
+Out[149]: ['E', 'H', 'a', 'o', 's', 's', 's', 'y']
+
+
+what's the difference between sorted and *.sort
+*.sort will change the object's value
+while sorted will not assign new value to the object
+  just show the consuquence
+ 
+In [154]: new
+Out[154]: [45, 24, 7, 274, 4, 2]
+
+In [155]: sorted(new)
+Out[155]: [2, 4, 7, 24, 45, 274]
+
+In [156]: new
+Out[156]: [45, 24, 7, 274, 4, 2]
+
+In [157]: new.sort()
+
+In [158]: new
+Out[158]: [2, 4, 7, 24, 45, 274]
+
+
+Tuples  which is surrounded with ()brackets
+In [159]: 41,42,5,34
+Out[159]: (41, 42, 5, 34)
+
+In [161]: bucky = (31,32,33,34)
+
+In [162]: bucky[2]
+Out[162]: 33
+
+16:Strings  n stuff
+
+------------------------------------------funny
+
+In [163]: bucky = "hey there bucky,hows your head"
+
+In [164]: bucky = "hey there %s,hows your %s"
+
+In [165]: varb = ('betty','foot')
+
+In [166]: print bucky % varb
+hey there betty,hows your foot
+
+
+In [167]: varc = ('tuna','fin')
+
+In [168]: print bucky % varc
+hey there tuna,hows your fin
+
+
+In [170]: example
+Out[170]: 'hey now bessie nice chops'
+
+In [171]: example.find('bessie')
+Out[171]: 8
+
+In [174]: example.find('nice')
+Out[174]: 15
+
+...............................Take it easy !seperator should in front
+: example
+: 'hey now bessie nice chops'
+
+In [169]: example = "hey now bessie nice chops"
+In [183]: seperator = " "
+In [182]: seperator.join(example)
+Out[182]: 'h e y   n o w   b e s s i e   n i c e   c h o p s
+
+In [183]: seperator = "*"
+In [184]: seperator.join(example)
+Out[184]: 'h*e*y* *n*o*w* *b*e*s*s*i*e* *n*i*c*e* *c*h*o*p*s'
+
+
+In [185]: example = ['hey','there','bessie','hoss']
+
+In [186]: glue = 'hoss'
+
+In [187]: glue.join(example)
+Out[187]: 'heyhosstherehossbessiehosshoss'
+
+
+In [188]: seperator.join(example)
+Out[188]: 'hey*there*bessie*hoss'
+
+join's most important function is connect the !str to str with
+  seperator,but take care seperator must be in front
+
+
+In [189]: example
+Out[189]: ['hey', 'there', 'bessie', 'hoss']
+
+In [190]: example.lower()
+--------------------------------------------------------
+AttributeError                            Traceback (mos
+<ipython-input-190-eaed6160ee71> in <module>()
+----> 1 example.lower()
+
+AttributeError: 'list' object has no attribute 'lower'	
+
+In [191]: str(example).lower()
+Out[191]: "['hey', 'there', 'bessie', 'hoss']"
+
+In [192]: str(example).upper()
+Out[192]: "['HEY', 'THERE', 'BESSIE', 'HOSS']"
+'
+In [194]: truth
+Out[194]: 'I love old women'
+
+In [195]: truth.replace("women","man")
+Out[195]: 'I love old man'
+
+In [196]: truth
+Out[196]: 'I love old women'
+
+18:dictionary
+ {}
+  {key}
+    {key:value}
+
+In [197]: book = {'Dad':'Bob','Mom':'mei','Bro':'jim'}
+
+In [198]: book
+Out[198]: {'Bro': 'jim', 'Dad': 'Bob', 'Mom': 'mei'}
+
+In [199]: book['Dad']
+Out[199]: 'Bob'
+
+you give book the key ,and then book give you the value 
+
+
+In [204]: ages = {'Dad':'42','Mom':52}
+
+In [205]: ages['Dad']
+Out[205]: '42'
+
+In [207]: book.clear()
+
+In [208]: book
+Out[208]: {}
+
+
+
+In [209]: tuna = ages.copy()
+
+In [210]: tuna['Mom']
+Out[210]: 52
+
+In [211]: tuna.has_key('Mom')
+Out[211]: True
+
+In [212]: tuna.has_key('Apples')
+Out[212]: False
+
+
+19: IF StateMent
+
+it checks test true pressions!
+  condiction met!
+
+if you put if ,so then you should put the test experssion
+  and finally the if_suite
+ so if = if + if_expression + if_suite
+
+or  if = if + if_statement + if_suite
+
+tuna = "fish"
+if tuna == "fish":
+    print 'this is a fish alright''
+
+so if is is
+  if _statement is tuna == 'fish'
+  if_suite is print 'this is a fish alright'
+
+don;t forget :(colen)
+ comen ;
+
+
+20: else n elif
+
+  if if_statement is false,what 's up? what should I do?
+
+  so else  n elif
+
+  if there are more if_statements ,so you can use elif
+
+///code
+tuna = "fish"
+if tuna == "bash":
+    print 'this is a fish alright'
+
+elif tuna == "slamon":
+    print "I hope i dont get slamonila poissin"
+
+elif tuna == "tuna":
+    print "easy there tuna boat"
+else:
+    print 'I don\'t know what this is'
+
+///code end
+
+
+21:Nesting StateMents
+
+
+ thing  = "animal"
+animal = "cat"
+
+if thing == "animal":
+    if animal == "cat":
+        print 'this is a cat'
+    else:
+        print 'i dont know what the animal is'
+
+else:
+    print 'I dont  know what this thing is '
+
+
+22: comparison operation
+
+>>> 9!=9
+False
+>>> 9!=3
+True
+>>> 9<7
+False
+>>> 9>7
+True
+>>> >>> one = [21,22,23]
+>>> two = one
+>>> one == two
+True
+
+>>> one == two
+True
+>>> one is two
+True
+>>> two is one
+True
+>>> three = [21,22,23]   ////when you new built a list for three
+     //and then take comparison with one ,the consequence is false
+  //only one = two ,so one and two are totally the same!
+
+althout the one or two have the same value with the three
+but they are not the same object! Yes ,this is can be
+explain with,the property may be the same,but there exists different
+methods maybe!
+  you must know that one and two have direct the same object!
+!
+
+>>> one == three
+True
+
+
+so 'is' take comparison with objects between each other
+ while  '==' take comparison with values betweem each other
+
+>>> one is three
+
+
+
+In [215]: 's' in pizza
+Out[215]: False
+
+In [216]: 'p' in pizza
+Out[216]: True
+
+in sometimes the same way with the "=="
+
+
+23:and and or
+
+example =5
+ if exampele >3:
+     if example < 10:
+          print 'number is betweent 3 and 10'
+
+ you can change the code like this 
+
+  if exameple <10 and example <10:
+   	 print 'number is between 3 and 10'
+
+24:for and while loops
+
+In [220]: b =1
+
+In [221]: while b<=10:
+   .....:     print b
+   .....:     b+=1
+   .....:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+In [222]: gl = ['bread','milk','meat','beaf']
+
+In [223]: gl
+Out[223]: ['bread', 'milk', 'meat', 'beaf']
+
+In [224]: for food in gl:
+   .....:     print food
+   .....:
+bread
+milk
+meat
+beaf
+
+In [225]: for food in gl:
+   .....:     print 'I want to eat'+food
+   .....:
+I want to eatbread
+I want to eatmilk
+I want to eatmeat
+I want to eatbeaf
+
+for n while loop is just sentence sequences!!!!!still sequence!!!
+
+
+
+25:Infinite loops and Break
+
+
+In [229]: ages
+Out[229]: {'Dad': '42', 'Mom': 52}
+
+In [230]: for item in ages:
+   .....:     print item
+   .....:
+Dad
+Mom
+
+/////////////////////////////you also want to get the item value
+In [231]: for item in ages:
+   .....:     print item,ages[item]
+   .....:
+Dad 42
+Mom 52
+
+
+
+Infinite Loops:
+In [233]: while 1:
+   .....:     name = raw_input('Enter name:')
+   .....:     if name == 'quit':
+   .....:         break
+   .....:
+Enter name:quit
+
+
+
+26:Building Functions:
+
+   you want to use the same code  ,so you should create a function 
+for you to utilize again
+
+
+def (define e funtion )
+
+def whatsup(x):
+    //what you want to whatsup to do
+           return 'what's up '+x
+
+
+
+In [234]: def whatsup(x):
+   .....:     return 'whats up'+x
+   .....:
+
+In [235]: whatsup('tonny')
+Out[235]: 'whats uptonny'
+
+
+In [236]: def plusten(y):
+   .....:     return y+10
+   .....:
+
+In [237]: plusten(3)
+Out[237]: 13
+
+
+27:default parameters:
+
+In [238]: def name(first,last):
+   .....:     print '%s,%s'% (first,last)
+   .....:
+
+In [239]: name('bucky','roberts')
+bucky,roberts
+
+
+In [241]: def name(first = 'tom',last='smith'):
+   .....:      print '%s,%s'%(first,last)
+
+
+In [243]: name()
+tom,smith
+
+In [244]: name('bucky','roberts')
+bucky,roberts
+
+
+28:Multiple Paramters
+
+In [247]: def list(*food):
+   .....:     print food
+   .....:
+
+In [248]: list('apples')
+('apples',)
+
+In [249]: list('apples','peaches','beef')
+('apples', 'peaches', 'beef')
+
+
+
+
+In [250]: def profile(name,*age):
+   .....:     print name
+   .....:     print ages
+   .....:
+
+In [251]: profile('bucky')
+bucky
+{'Dad': '42', 'Mom': 52}
+
+In [252]: profile('bucky',34,13,3,6)
+bucky
+{'Dad': '42', 'Mom': 52}
+
+because I have define the value of ages,so it works! 
+  namely ,you can use dictionary to *age,or *thing ,*object etc
+
+*means after name ,all value is belong to age
+
+In [245]: name('bucky')
+bucky,smith
+
+In [246]: name(last='bucky',first='bb')
+bb,bucky
+
+
+In [256]: def profile (name,*tage):
+   .....:     print name
+   .....:     print tage
+   .....:
+
+In [257]: profile('bucky')
+bucky
+()
+
+In [258]: profile('bucky',34,5,2,6,4)
+bucky
+(34, 5, 2, 6, 4)
+
+
+29:Paramter Types
+
+In [259]: def cart(**items):
+   .....:     print items
+   .....:
+
+In [260]: cart(apples =4,peaches = 60, beef =60)
+{'peaches': 60, 'apples': 4, 'beef': 60}
+
+
+so single * generate the () tuple  which need tuple as parameter
+   double * generate the {} dictionary  which needs (key value1 )
+
+
+
+In [261]: def profile(first,last,*ages,**items):
+   .....:     print first,last
+   .....:     print ages
+   .....:     print items
+
+
+In [263]: profile('bucky','roberts',23,5,46,30,7,4,apples=4,bacons=9,button=3)
+bucky roberts
+(23, 5, 46, 30, 7, 4)
+{'button': 3, 'apples': 4, 'bacons': 9}
+
+
+funny very funny!
+
+so python can understand what I am talking about
+first I input the single value
+second I input a tuple
+third  I input a dictionary
+
+
+30:tuples as parameters:
+
+  change tuple into pieces  use *
+  change diction into piece use  **
+
+In [265]: example(3,5,3)
+Out[265]: 18
+
+In [266]: tuna  =(5,7,3)
+
+In [267]: example(tuna)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-267-1874e853b724> in <module>()
+----> 1 example(tuna)
+
+TypeError: example() takes exactly 3 arguments (1 given)
+
+In [268]: example(*tuna)
+Out[268]: 26
+
+
+
+In [269]: def example2(**this):
+   .....:     print this
+   .....:
+
+In [270]: bacon={'Mom','21','Dad','34'}
+
+In [271]: example(bacon)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-271-510ca3b8b682> in <module>()
+----> 1 example(bacon)
+
+TypeError: example() takes exactly 3 arguments (1 given)
+
+
+In [275]: bacon = {'Mom':24,"Dad":44}
+
+In [278]: example2(**bacon)
+{'Dad': 44, 'Mom': 24}
+
+31:object oriented Program
+ an object is a thing which store data and method
+
+
+bucky.   .period
+first  class!!!!!!!!!!!!!!!!!!!!
+based on class
+class classname:
+   Data:
+   eyes = "black"
+   age = 22
+   Method:
+   def this Method(self):
+       return "hey this method worked"
+
+
+
+In [279]: class exampleClass:
+   .....:     eyes = "blacj"
+   .....:     age = 33
+   .....:     def thisMethod(self):
+   .....:         return "hey this method worked"
+   .....:
+
+In [280]: exampleClass
+Out[280]: __main__.exampleClass
+
+In [281]: exampleObject = exampleClass()
+
+In [282]: exampleObject.eyes
+Out[282]: 'blacj'
+
+In [283]: exampleObject.age
+Out[283]: 33
+
+In [284]: exampleObject.thisMethod()
+Out[284]: 'hey this method worked'
+
+
+you want to put period into the between object and property or method
+
+
+32:classes n self
+
+  self is the first function in your class
+  no! self is just mean "this" in java or c++
+
+In [286]: class className:
+   .....:      def createName(self,name):
+   .....:         self.name = name
+   .....:      def displayName(self):
+   .....:          return self.name
+   .....:      def saying(self):
+   .....:          print "hello %s"%self.name
+   .....:
+
+In [287]: className
+Out[287]: __main__.className
+
+In [288]: first = className()
+
+In [289]: first.saying()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-289-756120c245be> in <module>()
+----> 1 first.saying()
+
+<ipython-input-286-d29bdd1635a0> in saying(self)
+      5          return self.name
+      6      def saying(self):
+----> 7          print "hello %s"%self.name
+      8
+
+AttributeError: className instance has no attribute 'name'
+
+In [290]: second  = className()
+
+In [291]: first.createName('bucky')
+
+In [292]: first.saying
+Out[292]: <bound method className.saying of <__main__.className instance at 0x03
+C23D78>>
+
+In [293]: first.saying()
+hello bucky
+
+
+self means first  first first  first
+
+  also means second second second!
+self is reaction with the object he generate
+
+self is the object name!
+
+33:subclasses and superclasses
+ parent and child
+
+first make class>>>>>>
+
+In [294]: class parentClass:
+   .....:     var1 = "i am var1"
+   .....:     var2 = 'i am var2'
+you can look parentClass as a parameter  ,and then pass into childClas
+
+In [296]: class childClass(parentClass): //child will inherent the p
+   .....:     pass  //doesn't do anything  it is just a bond
+
+
+
+In [300]: parentObject.var1
+Out[300]: 'i am var1'
+
+In [301]: childObject = childClass()
+
+In [302]: childObject.va
+childObject.var1 childObject.var2
+
+In [302]: childObject.var1
+Out[302]: 'i am var1'
+
+
+inherent all the tree from parentClass-----just copy
+
+so childClass is just Subclass
+   parenTClass is just SuperClass
+
+
+34:overwrite variables on Sub
+
+
+In [304]: class parent:
+   .....:     var1 = "bacon"
+   .....:     var2 = "sauge"
+   .....:
+
+In [305]: class child(parent):
+   .....:     var2 = "toast"
+   .....:
+
+In [306]: pob = parent()
+
+In [307]: cob = child()
+
+In [308]: pob.var1
+Out[308]: 'bacon'
+
+In [309]: pob.var2
+Out[309]: 'sauge'
+
+In [310]: cob.var2
+Out[310]: 'toast'
+
+In [311]: cob.var1
+Out[311]: 'bacon'
+
+
+In the subclass ,you can inherent the parent value ,also you can
+  overwrite it  in the subclass
+
+
+
+36:Multiple paraent Classes:
+
+
+In [312]: class Mom:
+   .....:     var1 = "hey i am mom"
+   .....:
+
+In [313]: class Dad:
+   .....:     var2 = "hey there som i am a dad"
+   .....:
+
+In [314]: class child(Mom,Dad):
+   .....:     var3 = 'i am a new variable'
+   .....:
+
+In [315]: childObject = child()
+
+In [316]: childObject.var1
+Out[316]: 'hey i am mom'
+
+In [317]: childObject.var2
+Out[317]: 'hey there som i am a dad'
+
+In [318]: childObject.var3
+Out[318]: 'i am a new variable'
+
+
+36:constructor:
+2underscoot
+
+
+In [319]: class swine:
+   .....:     def apples(self):
+   .....:         print "beef pie"
+   .....:
+
+In [320]: obj = swine()
+
+In [321]: obj.apples()
+beef pie
+
+In [322]: class new:
+   .....:     def __init__(self):
+   .....:         print "this is a  constructor"
+   .....:         print "this also print out"
+   .....:
+
+In [323]: newobj = new()
+this is a  constructor
+this also print out              ///constructor can be instanly print
+     //out when i create the obj,if you want to know more informatin
+  //and more fast 
+
+
+37:Import Modules:
+ 
+ you want to use another programming!
+
+   so you can funtion it
+	  you can class it
+                 also you can module it!
+
+
+38:reload Modules:
+   import ModulesName
+
+baby = ModuleName.Method
+so you can use baby()  to execute one action
+
+
+reload(Modules) ///can load the latest information in the Modules
+
+
+39:Getting Modules info
+ built_in Modules
+
+
+import Math
+
+math.sqrt(334)
+
+
+dir(ModuleName)  will list all the information in the modules]
+
+and then help("in the dir(ModuleName)")
+give you further information for you !
+              
+In [326]: math.__doc__
+Out[326]: 'This module is always available.  It provides access to the\nmathemat
+ical functions defined by the C standard.'
+
+
+dir ==de
+
+40:working with files:
+
+
+In [329]: fob = open('j:/a.text','w')
+
+In [330]: fob.write('hey now brown cow')
+
+In [333]: fob.close()
+
+In [334]: fob = open('j:/a.text','r')
+
+In [335]: fob.read(3)
+Out[335]: 'hey'
+
+In [338]: fob.read()  ///because the point have move to 3! so it
+               //just read the remained things! remained data
+Out[338]: ' now brown cow'
+
+
+41:reading and writing:
+
+In [340]: fob = open('j:/a.text','r')
+
+In [342]: print fob.readline()
+hey now brown cow
+
+In [343]: print fob.readlines()  ///because file pointer!have already
+                       //move
+[]
+
+In [344]: fob.close()
+
+In [345]: fob = open('j:/a.text','r')
+
+In [346]: print fob.rea
+fob.read      fob.readinto  fob.readline  fob.readlines
+
+In [346]: print fob.readlines()
+['hey now brown cow']
+
+In [348]: fob = open('j:/a.text','w')
+
+In [349]: fob.write('this is a new line\n this is line2\nthis is line3')
+
+In [350]: fob.close()
+
+In [351]: fob = open('j:/a.text','r')
+
+In [352]: print fob.readlines()
+['this is a new line\n', ' this is line2\n', 'this is line3']
+
+
+
+42:writeing Lines:
+ 
+In [356]: liste  = fob.readlines()
+In [358]: liste
+Out[358]: ['this is a new line\n', ' this is line2\n', 'this is line3']
+
+In [359]: fob.close()
+
+
+In [363]: liste[2]="mmm i sure love here"
+
+In [364]: liste
+Out[364]: ['this is a new line\n', ' this is line2\n', 'mmm i sure love here']
+
+
+In [366]: fob = open('j:/a.text','w')
+
+In [367]: fob.writelines(liste)
+
+In [368]: fob.close()
+
+43:installing wxpython
+
+
+
+-----------------------------------------one little Bug
+f:\pythoncode\Module.py in <module>()
+     44 a = [1,2,3]
+     45 b = [4,5,6]
+---> 46 t = a.extent(b)
+     47 print seperator.join(t)
+     48 fob.writelines(strin)
+
+AttributeError: 'list' object has no attribute 'extent'
+
+extent should be changed into extend
